@@ -1,8 +1,10 @@
-%h1 Show Micropost
+%h1 Show Microposts
 
-=@micropost.title
-=@micropost.content
+-if @microposts.any?
+  %h3 
+    Microposts
+    =@microposts.count
+  %ol.microposts
+    = render @microposts
 
-= link_to 'Edit', edit_micropost_path(@micropost)
-\|
-= link_to 'Back', microposts_path
+  = link_to 'Back', microposts_path
