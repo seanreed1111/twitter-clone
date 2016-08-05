@@ -5,7 +5,11 @@ class MicropostsController < ApplicationController
   # GET /microposts
   # GET /microposts.json
   def index
-    @microposts = Micropost.all
+    if(@users)
+      #insert statement here
+    else
+      @microposts = Micropost.all
+    end
   end
 
   # GET /microposts/1

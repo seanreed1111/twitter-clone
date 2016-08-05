@@ -1,9 +1,14 @@
-%h1 Microposts Index Page
+%h1 
+  Microposts for
+  =@user ? @user.email : "All Users"
 
 -@microposts.each do |micropost|
   .posts
     =micropost.title
     =micropost.content
+    =link_to micropost.user.email, {controller: :users, action: :show, id: micropost.user.id}
+
+    //fix the links later
     = link_to 'Show', micropost 
     = link_to 'Edit', edit_micropost_path(micropost) 
     = link_to 'Destroy', micropost, :method => :delete, :data => { :confirm => 'Are you sure?' }
