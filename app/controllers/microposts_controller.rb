@@ -1,6 +1,6 @@
 class MicropostsController < ApplicationController
-  before_action :authenticate_user!
-  before_action :set_micropost, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index] #whitelist
+  before_action :set_micropost, except: [:index, :show, :new, :create] #whitelist
 
   # GET /microposts
   # GET /microposts.json
