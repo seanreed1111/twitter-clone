@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
-  before_action :find_user
+  before_action :find_user, only: [:show_user_microposts]
 
-  def show # should I do this as index?
+  def index
+    @users = User.all
+  end
+
+
+  def show_user_microposts
     @microposts = @user.microposts.all
     render "microposts/index"
   end

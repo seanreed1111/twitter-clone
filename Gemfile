@@ -50,7 +50,8 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'pg'
 gem 'simple_form'
-gem 'ffaker' #ffaker is used in production to generate fake data
+gem 'ffaker' #ffaker is used in production to generate fake users and tweets via the dashboard
+gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   gem 'rspec-rails'

@@ -7,9 +7,7 @@ class MicropostsController < ApplicationController
 
   #index method gets all microposts from all users
   def index
-
-      @microposts = Micropost.all
-    end
+    @microposts = Micropost.all
   end
 
   # GET /microposts/1
