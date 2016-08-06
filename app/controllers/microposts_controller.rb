@@ -4,10 +4,10 @@ class MicropostsController < ApplicationController
 
   # GET /microposts
   # GET /microposts.json
+
+  #index method gets all microposts from all users
   def index
-    if(@users)
-      #insert statement here
-    else
+
       @microposts = Micropost.all
     end
   end

@@ -50,6 +50,7 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'pg'
 gem 'simple_form'
+gem 'ffaker' #ffaker is used in production to generate fake data
 
 group :development, :test do
   gem 'rspec-rails'
@@ -59,7 +60,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'ffaker'
   gem 'capybara'
   gem 'launchy'
   gem 'selenium-webdriver'
